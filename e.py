@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+import pandas as pd
+
+df_trips = pd.read_csv("Trips_by_Distance.csv")
 
 # Frequency bins
 frequency_bins = [
