@@ -11,14 +11,14 @@ core_counts = [10, 20]
 timing_results = {}
 
 # Load data with pandas
-data = pd.read_csv("Trips_by_Distance.csv")
+df_trips = pd.read_csv("Trips_by_Distance.csv")
 
 # Convert trip columns to numeric
-data["Number of Trips 10-25"] = pd.to_numeric(data["Number of Trips 10-25"], errors="coerce")
-data["Number of Trips 50-100"] = pd.to_numeric(data["Number of Trips 50-100"], errors="coerce")
+df_trips["Number of Trips 10-25"] = pd.to_numeric(df_trips["Number of Trips 10-25"], errors="coerce")
+df_trips["Number of Trips 50-100"] = pd.to_numeric(df_trips["Number of Trips 50-100"], errors="coerce")
 
 # Convert to Dask DataFrame
-dask_data = dd.from_pandas(data, npartitions=4)
+dask_data = dd.from_pandas(df_trips, npartitions=4)
 
 # Simulate execution with different core counts
 for cores in core_counts:
