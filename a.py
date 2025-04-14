@@ -1,3 +1,6 @@
+import pandas as pd
+df_trips = pd.read_csv("Trips_by_Distance.csv")
+
 # Define midpoints
 distance_midpoints = {
     'Number of Trips <1': 0.5,
