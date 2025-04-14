@@ -15,11 +15,11 @@ only_10_25 = dates_10_25 - dates_50_100
 only_50_100 = dates_50_100 - dates_10_25
 
 # Print results
-print("✅ Dates with >10M trips in BOTH 10–25 and 50–100 categories:")
+print("Dates with >10M trips in BOTH 10–25 and 50–100 categories:")
 print(sorted(both))
 
-print("\n📅 Dates with >10M trips in 10–25 only:")
+print("\nDates with >10M trips in 10–25 only:")
 print(sorted(only_10_25))
 
-print("\n📅 Dates with >10M trips in 50–100 only:")
+print("\nDates with >10M trips in 50–100 only:")
 print(sorted(only_50_100))
