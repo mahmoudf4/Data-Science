@@ -1,3 +1,6 @@
+import pandas as pd
+df_trips = pd.read_csv("Trips_by_Distance.csv")
+
 # Filter for > 10 million trips in each category
 high_10_25 = df_trips[df_trips['Number of Trips 10-25'] > 10_000_000]
 high_50_100 = df_trips[df_trips['Number of Trips 50-100'] > 10_000_000]
