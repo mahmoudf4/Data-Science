@@ -1,5 +1,11 @@
+#import necessary libraries for data aquisition
 import pandas as pd
+# Load dataset
 df_trips = pd.read_csv("Trips_by_Distance.csv")
+
+# Check dataset
+print(df.head())
+print(df.info())
 
 # Define midpoints
 distance_midpoints = {
