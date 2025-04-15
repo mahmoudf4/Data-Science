@@ -1,6 +1,9 @@
+import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+
+df_trips = pd.read_csv("Trips_by_Distance.csv")
 
 # Features: number of trips at each distance band
 X = df_trips[[
@@ -19,9 +22,7 @@ X = df_trips[[
 X = X.fillna(X.mean())
 
 # Target: number of people who didn’t stay home
-y = df_trips['Population Not Staying at Home']
-
-y = y.fillna(y.mean())
+y = df_trips['Population Not Staying at Home'].fillna(y.mean())
 
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
